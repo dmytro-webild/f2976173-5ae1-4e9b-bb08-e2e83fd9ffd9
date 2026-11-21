@@ -70,7 +70,7 @@ const NavbarFullscreen = ({ logo = "Northwind", navItems = DEFAULT_NAV_ITEMS, ct
         <a
           href="/"
           className={cn(
-            "text-xl font-medium transition-colors duration-500",
+            "text-base md:text-lg font-semibold tracking-tight transition-colors duration-500",
             menuOpen ? "text-background" : "text-foreground"
           )}
         >

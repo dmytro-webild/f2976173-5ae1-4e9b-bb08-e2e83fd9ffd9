@@ -4,7 +4,6 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import WordByWordReveal from "@/components/animation/WordByWordReveal";
 import ParallaxImage from "@/components/animation/ParallaxImage";
-import AutoFillText from "@/components/animation/AutoFillText";
 import AppearOnScroll from "@/components/animation/AppearOnScroll";
 import Media from "@/components/kit/Media";
 
@@ -71,7 +70,7 @@ const HeroBillboardBrandFloatingCards = ({
 
       <div className="flex flex-col gap-10 md:gap-12 w-full max-w-6xl px-6 mx-auto">
         <div className="flex flex-col items-end gap-5">
-          <AutoFillText className="w-full font-semibold" paddingY="">{brand}</AutoFillText>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-right text-balance">{brand}</h1>
 
           <WordByWordReveal
             text={description}
