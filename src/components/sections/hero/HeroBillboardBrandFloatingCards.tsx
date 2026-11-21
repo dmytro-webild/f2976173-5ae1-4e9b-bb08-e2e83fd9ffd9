@@ -69,18 +69,18 @@ const HeroBillboardBrandFloatingCards = ({
       ))}
 
       <div className="flex flex-col gap-10 md:gap-12 w-full max-w-6xl px-6 mx-auto">
-        <div className="flex flex-col items-end gap-5">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-right text-balance">{brand}</h1>
+        <div className="flex flex-col items-start gap-5">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-left text-balance">{brand}</h1>
 
           <WordByWordReveal
             text={description}
             variant={textAnimation}
             tag="p"
-            className="w-full md:w-1/2 text-base md:text-lg 2xl:text-xl leading-snug text-balance text-right"
+            className="w-full md:w-1/2 text-base md:text-lg 2xl:text-xl leading-snug text-balance text-left"
           />
 
           <AppearOnScroll variant="slide-up" delay={0.15}>
-            <div className="flex flex-wrap justify-end gap-3 mt-1 md:mt-2">
+            <div className="flex flex-wrap justify-start gap-3 mt-1 md:mt-2">
               <a href={primaryButton.href} className="flex items-center justify-center h-10 px-6 text-sm rounded-lg cursor-pointer btn-primary bg-primary text-primary-foreground">{primaryButton.text}</a>
               <a href={secondaryButton.href} className="flex items-center justify-center h-10 px-6 text-sm rounded-lg cursor-pointer btn-secondary bg-secondary text-secondary-foreground">{secondaryButton.text}</a>
             </div>
