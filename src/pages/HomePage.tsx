@@ -33,10 +33,10 @@ export default function HomePage() {
             text: "Subscriptions",
             href: "#pricing"
           }}
-          imageSrc="https://storage.googleapis.com/webild/users/user_3LVkA0HszNibY6F0jzfi6VGGzRq/uploaded-1795293720922-6nun86nm.jpg"
+          imageSrc="https://storage.googleapis.com/webild/users/user_3LVkA0HszNibY6F0jzfi6VGGzRq/uploaded-1795293720922-6nun86nm.jpg?_wi=1"
           floatingCards={[
             {
-              imageSrc: "https://storage.googleapis.com/webild/users/user_3LVkA0HszNibY6F0jzfi6VGGzRq/uploaded-1795293720922-6nun86nm.jpg",
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3LVkA0HszNibY6F0jzfi6VGGzRq/uploaded-1795293720922-6nun86nm.jpg?_wi=2",
               name: "Signature Latte"
             },
             {
