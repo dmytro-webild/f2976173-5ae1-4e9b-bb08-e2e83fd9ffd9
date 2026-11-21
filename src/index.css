@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Fraunces:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/messy-handwritten");
+@import "tailwindcss";
+@import "./styles/animations.css";
+@import "./styles/masks.css";
+
+@theme {
+  --breakpoint-lg: 55rem;
+}
+
+/* webild:theme-ai */
+:root {
+  --primary-cta: #6b2433;
+  --primary-cta-text: #faf1f0;
+  --secondary-cta: #ffffff;
+  --secondary-cta-text: #3a1820;
+  --background-accent: #cf8f98;
+
+  --background: #faf1f0;
+  --foreground: #3a1820;
+  --card: #f2e0e0;
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: var(--primary-cta);
+  --primary-foreground: var(--primary-cta-text);
+  --secondary: var(--secondary-cta);
+  --secondary-foreground: var(--secondary-cta-text);
+  --muted: #ebe0df;
+  --muted-foreground: #765b60;
+  --accent: var(--background-accent);
+  --accent-foreground: #3a1820;
+  --deep: #3a1820;
+  --deep-foreground: #faf1f0;
+  --destructive: #ef4444;
+  --destructive-foreground: #1b1b1b;
+  --border: #e3d7d7;
+  --input: #e3d7d7;
+  --ring: var(--primary-cta);
+  --radius: 1.75rem;
+
+  --font-heading: "Fraunces", sans-serif;
+  --font-body: "Source Serif 4", sans-serif;
+  --font-label: "Inter", sans-serif;
+  --heading-weight: 600;
+  --heading-tracking: 0em;
+  --heading-leading: 1.15;
+  --text-display: clamp(4.5rem, 0.8rem + 17.5vw, 16.5rem);
+  --text-h1: clamp(2.25rem, 1.3rem + 3.6vw, 4.5rem);
+  --text-h2: clamp(1.875rem, 1.45rem + 1.75vw, 3rem);
+  --text-h3: clamp(1.25rem, 1.08rem + 0.7vw, 1.875rem);
+  --text-body-lg: clamp(1rem, 0.92rem + 0.33vw, 1.25rem);
+  --text-body: clamp(1rem, 0.96rem + 0.17vw, 1.125rem);
+  --text-small: 0.9375rem;
+  --text-label: 0.875rem;
+  --label-tracking: 0em;
+  --label-case: none;
+
+  --gutter: 1.5rem;
+  --max-w: 1104px;
+  --container: min(100% - 2 * var(--gutter), var(--max-w));
+  --section-space: 5rem;
+  --gap: clamp(0.75rem, 0.65rem + 0.4vw, 1rem);
+  --grid-columns: 12;
+
+  --radius-card: 1.75rem;
+  --radius-button: 1.75rem;
+  --radius-image: 1.75rem;
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.7, 0, 0.3, 1);
+  --dur-fast: 0.3s;
+  --dur-base: 0.7s;
+  --dur-slow: 1.2s;
+  --reveal-distance: 1.5rem;
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-deep: var(--deep);
+  --color-deep-foreground: var(--deep-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Messy Handwritten", sans-serif;
+  --font-tight: "Inter Tight", sans-serif;
+  --font-mono: monospace;
+
+  --radius: var(--radius);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+    outline-color: color-mix(in srgb, var(--color-ring) 50%, transparent);
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 1) rgba(255, 255, 255, 0);
+}
+
+html {
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: "Inter", sans-serif;
+  position: relative;
+  min-height: 100vh;
+  overscroll-behavior: none;
+  overscroll-behavior-y: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Messy Handwritten", sans-serif;
+}
+
+.card,
+.kit-card {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(to bottom right, color-mix(in srgb, var(--color-card) 80%, transparent), color-mix(in srgb, var(--color-card) 40%, transparent));
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid var(--color-card);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  box-shadow: color-mix(in srgb, var(--color-background) 20%, transparent) 0px 3px 1px 0px inset, color-mix(in srgb, var(--color-primary) 13%, transparent) 0px 0.839802px 0.503881px -0.3125px, color-mix(in srgb, var(--color-primary) 13%, transparent) 0px 1.99048px 1.19429px -0.625px, color-mix(in srgb, var(--color-primary) 13%, transparent) 0px 3.63084px 2.1785px -0.9375px, color-mix(in srgb, var(--color-primary) 13%, transparent) 0px 6.03627px 3.62176px -1.25px, color-mix(in srgb, var(--color-primary) 13%, transparent) 0px 9.74808px 5.84885px -1.5625px, color-mix(in srgb, var(--color-primary) 13%, transparent) 0px 15.9566px 9.57398px -1.875px, color-mix(in srgb, var(--color-primary) 13%, transparent) 0px 27.4762px 16.4857px -2.1875px, color-mix(in srgb, var(--color-primary) 13%, transparent) 0px 50px 30px -2.5px;
+}
+
+.btn-secondary {
+  backdrop-filter: blur(8px);
+  background: linear-gradient(to bottom right, color-mix(in srgb, var(--color-secondary) 80%, transparent), var(--color-secondary));
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  border: 1px solid var(--color-secondary);
+}
+
+.btn-primary,
+.btn-secondary,
+button.card {
+  min-height: 3.35rem;
+  min-width: 3.35rem;
+  font-size: 1rem;
+}
+
+button.btn-primary,
+button.btn-secondary,
+button.card {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@layer components {
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: var(--radius-lg);
+    font-family: var(--font-body);
+    line-height: 1.2;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: opacity var(--dur-fast) var(--ease-out);
+  }
+
+  .btn-primary {
+    color: var(--primary-foreground);
+  }
+
+  .btn-secondary {
+    color: var(--secondary-foreground);
+  }
+
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    opacity: 0.85;
+  }
+
+  .btn-label {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+  }
+
+  .btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-label);
+    font-size: var(--text-label);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--foreground);
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    padding-bottom: 0.3rem;
+    transition: background-size var(--dur-base) var(--ease-out);
+  }
+
+  .btn-link:hover {
+    background-size: 100% 1px;
+  }
+
+  .kit-card {
+    color: var(--card-foreground);
+    border-radius: var(--radius-card);
+  }
+
+  [data-card="filled"] .kit-card {
+    background: var(--card);
+    backdrop-filter: none;
+  }
+
+  .kit-pattern {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+[data-tone="deep"] {
+  --background: var(--deep);
+  --foreground: var(--deep-foreground);
+  --card: #f2e0e0;
+  --card-foreground: var(--deep-foreground);
+  --primary: var(--deep-foreground);
+  --primary-foreground: var(--deep);
+  --secondary: #ffffff;
+  --secondary-foreground: var(--deep-foreground);
+  --muted: #ebe0df;
+  --muted-foreground: #765b60;
+  --border: #e3d7d7;
+  --input: #e3d7d7;
+  --ring: var(--deep-foreground);
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary,
+  .btn-secondary,
+  .btn-link {
+    transition: none;
+  }
+}

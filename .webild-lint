@@ -1,0 +1,10 @@
+src/components/Layout.tsx
+src/components/sections/contact/ContactBar.tsx
+src/components/sections/faq/FaqGlassRows.tsx
+src/components/sections/features/FeaturesFilterGrid.tsx
+src/components/sections/features/FeaturesGridSplitLarge.tsx
+src/components/sections/footer/FooterBrand.tsx
+src/components/sections/hero/HeroBillboardBrandFloatingCards.tsx
+src/components/sections/metrics/MetricsCupCounters.tsx
+src/components/sections/pricing/PricingBeanClub.tsx
+src/pages/HomePage.tsx
