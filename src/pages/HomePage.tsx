@@ -23,7 +23,7 @@ export default function HomePage() {
       <div id="hero" data-webild-section="HeroBillboardBrandFloatingCards" data-webild-section-id="HeroBillboardBrandFloatingCards-1" data-section="hero">
         <HeroBillboardBrandFloatingCards
           textAnimation="fade-blur"
-          brand="Little Leaf"
+          brand="Little Leaf Cafe"
           description="We source organic beans globally and roast them in small batches to order, bringing peak flavor straight to your door."
           primaryButton={{
             text: "Explore Blends",
