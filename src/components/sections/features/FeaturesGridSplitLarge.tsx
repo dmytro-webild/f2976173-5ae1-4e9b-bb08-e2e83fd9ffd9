@@ -2,6 +2,7 @@ import WordByWordReveal from "@/components/animation/WordByWordReveal";
 import ParallaxImage from "@/components/animation/ParallaxImage";
 import AppearOnScroll from "@/components/animation/AppearOnScroll";
 import AvatarGroup from "@/components/display/AvatarGroup";
+import CuteCharacterGirl from "@/components/display/CuteCharacterGirl";
 
 type FeatureItem = {
   title: string;
@@ -37,35 +38,40 @@ const FeaturesGridSplitLarge = ({
 }: FeaturesGridSplitLargeProps) => {
   return (
     <section aria-label="Features section" className="flex flex-col gap-8 md:gap-10 py-20">
-      <div className="flex flex-col items-center w-full max-w-6xl px-6 mx-auto gap-2">
-        <AppearOnScroll variant="fade">
-          <div className="px-3 py-1 mb-1 text-sm card rounded w-fit">
-            <p>{tag}</p>
-          </div>
-        </AppearOnScroll>
-
-        <WordByWordReveal
-          text={title}
-          variant={textAnimation}
-          tag="h2"
-          className="md:max-w-8/10 text-4xl md:text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-center text-balance"
-        />
-
-        <WordByWordReveal
-          text={description}
-          variant={textAnimation}
-          tag="p"
-          className="md:max-w-7/10 text-base md:text-lg 2xl:text-xl leading-snug text-center text-balance"
-        />
-
-        {(primaryButton || secondaryButton) && (
-          <AppearOnScroll variant="slide-up" delay={0.15}>
-            <div className="flex flex-wrap justify-center gap-3 mt-2 md:mt-3">
-              {primaryButton && <a href={primaryButton.href} className="flex items-center justify-center h-10 px-6 text-sm rounded-lg cursor-pointer btn-primary bg-primary text-primary-foreground">{primaryButton.text}</a>}
-              {secondaryButton && <a href={secondaryButton.href} className="flex items-center justify-center h-10 px-6 text-sm rounded-lg cursor-pointer btn-secondary bg-secondary text-secondary-foreground">{secondaryButton.text}</a>}
+      <div className="w-full max-w-6xl px-6 mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="w-full md:w-1/3 flex justify-center md:justify-start">
+          <CuteCharacterGirl bubbleText="Why Little Leaf? Look right here! ✨🍃" />
+        </div>
+        <div className="w-full md:w-2/3 flex flex-col items-center md:items-start text-center md:text-left gap-2">
+          <AppearOnScroll variant="fade">
+            <div className="px-3 py-1 mb-1 text-sm card rounded w-fit">
+              <p>{tag}</p>
             </div>
           </AppearOnScroll>
-        )}
+
+          <WordByWordReveal
+            text={title}
+            variant={textAnimation}
+            tag="h2"
+            className="text-4xl md:text-6xl 2xl:text-7xl leading-[1.15] font-semibold text-balance"
+          />
+
+          <WordByWordReveal
+            text={description}
+            variant={textAnimation}
+            tag="p"
+            className="text-base md:text-lg 2xl:text-xl leading-snug text-balance"
+          />
+
+          {(primaryButton || secondaryButton) && (
+            <AppearOnScroll variant="slide-up" delay={0.15}>
+              <div className="flex flex-wrap justify-center md:justify-start gap-3 mt-2 md:mt-3">
+                {primaryButton && <a href={primaryButton.href} className="flex items-center justify-center h-10 px-6 text-sm rounded-lg cursor-pointer btn-primary bg-primary text-primary-foreground">{primaryButton.text}</a>}
+                {secondaryButton && <a href={secondaryButton.href} className="flex items-center justify-center h-10 px-6 text-sm rounded-lg cursor-pointer btn-secondary bg-secondary text-secondary-foreground">{secondaryButton.text}</a>}
+              </div>
+            </AppearOnScroll>
+          )}
+        </div>
       </div>
 
       <div className="w-full max-w-6xl px-6 mx-auto flex flex-col gap-3 xl:gap-3.5 2xl:gap-4">

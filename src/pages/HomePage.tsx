@@ -23,7 +23,7 @@ export default function HomePage() {
       <div id="hero" data-webild-section="HeroBillboardBrandFloatingCards" data-webild-section-id="HeroBillboardBrandFloatingCards-1" data-section="hero">
         <HeroBillboardBrandFloatingCards
           textAnimation="fade-blur"
-          brand="Roast Haven"
+          brand="Little Leaf"
           description="We source organic beans globally and roast them in small batches to order, bringing peak flavor straight to your door."
           primaryButton={{
             text: "Explore Blends",
@@ -33,15 +33,15 @@ export default function HomePage() {
             text: "Subscriptions",
             href: "#pricing"
           }}
-          videoSrc="https://videos.pexels.com/video-files/12998497/12998497-hd_1280_720_25fps.mp4"
+          imageSrc="https://storage.googleapis.com/webild/users/user_3LVkA0HszNibY6F0jzfi6VGGzRq/uploaded-1795293720922-6nun86nm.jpg"
           floatingCards={[
             {
-              imageSrc: "https://img.b2bpic.net/free-photo/mockup-coffee-beans-form-word-coffee-cup-espresso-top-view_169016-53910.jpg",
-              name: "Cold Brew"
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3LVkA0HszNibY6F0jzfi6VGGzRq/uploaded-1795293720922-6nun86nm.jpg",
+              name: "Signature Latte"
             },
             {
               imageSrc: "https://img.b2bpic.net/free-photo/coffee-with-milk-glass_1203-1663.jpg",
-              name: "Dark Roast"
+              name: "Iced Latte"
             }
           ]}
         />
@@ -50,7 +50,7 @@ export default function HomePage() {
       <div id="services" data-webild-section="FeaturesGridSplitLarge" data-webild-section-id="FeaturesGridSplitLarge-1" data-section="services">
         <FeaturesGridSplitLarge
           textAnimation="fade"
-          tag="Why Roast Haven"
+          tag="Why Little Leaf"
           title="Precision at Every Step"
           description="From direct farm partnerships to final packaging, every stage preserves bean character."
           topItems={[
@@ -288,7 +288,7 @@ export default function HomePage() {
             {
               icon: Mail,
               label: "Email",
-              href: "mailto:hello@roasthaven.com"
+              href: "mailto:hello@littleleaf.com"
             }
           ]}
         />
