@@ -7,7 +7,7 @@ export default function Layout() {
     <div className="relative isolate min-h-svh flex flex-col bg-background text-foreground" data-button="default" data-card="filled" data-pattern="none">
       <header data-webild-section="Header">
         <NavbarFullscreen
-          logo="Little Leaf"
+          logo="Little Leaf Cafe"
           navItems={[
             {
               name: "Our Roasts",
@@ -37,7 +37,7 @@ export default function Layout() {
       </main>
       <footer data-webild-section="Footer" data-section="footer">
         <FooterBrand
-          brand="Little Leaf"
+          brand="Little Leaf Cafe"
           columns={[
             {
               items: [
