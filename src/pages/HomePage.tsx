@@ -138,7 +138,7 @@ export default function HomePage() {
             {
               name: "Cascara Infusion",
               category: "Specialty",
-              imageSrc: "https://img.b2bpic.net/free-photo/front-view-clean-peeled-peanuts-dark-blue-shell-peanut-color-cips-walnut-nut-snack_179666-43734.jpg"
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3LVkA0HszNibY6F0jzfi6VGGzRq/uploaded-1795337203889-5vskikwk.jpg"
             }
           ]}
           allLabel="All"
