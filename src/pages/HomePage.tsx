@@ -136,7 +136,7 @@ export default function HomePage() {
               imageSrc: "https://img.b2bpic.net/free-photo/delicious-coffee-cups-with-foam_23-2149514290.jpg"
             },
             {
-              name: "Cascara Infusion",
+              name: "Americano",
               category: "Specialty",
               imageSrc: "https://storage.googleapis.com/webild/users/user_3LVkA0HszNibY6F0jzfi6VGGzRq/uploaded-1795337203889-5vskikwk.jpg"
             }
