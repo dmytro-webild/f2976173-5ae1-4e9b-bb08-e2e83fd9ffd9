@@ -131,7 +131,7 @@ export default function HomePage() {
               imageSrc: "https://img.b2bpic.net/free-photo/cup-corn-rings-blue-background-high-quality-photo_114579-75547.jpg"
             },
             {
-              name: "Cold Brew Artisan",
+              name: "coffee latte",
               category: "Specialty",
               imageSrc: "https://storage.googleapis.com/webild/users/user_3LVkA0HszNibY6F0jzfi6VGGzRq/uploaded-1795339181102-26vcz4r6.jpg"
             },
