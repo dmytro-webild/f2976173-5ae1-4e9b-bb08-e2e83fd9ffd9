@@ -133,7 +133,7 @@ export default function HomePage() {
             {
               name: "Cold Brew Artisan",
               category: "Specialty",
-              imageSrc: "https://img.b2bpic.net/free-photo/delicious-coffee-cups-with-foam_23-2149514290.jpg"
+              imageSrc: "https://storage.googleapis.com/webild/users/user_3LVkA0HszNibY6F0jzfi6VGGzRq/uploaded-1795339181102-26vcz4r6.jpg"
             },
             {
               name: "Americano",
